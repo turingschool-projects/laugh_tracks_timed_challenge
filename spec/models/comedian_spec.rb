@@ -1,4 +1,15 @@
 RSpec.describe Comedian do
+  describe 'Class Methods' do
+    describe '.average_age' do
+      it 'should return average age of all comedians' do
+        Comedian.create(name: 'Name1', age: 20)
+        Comedian.create(name: 'Name2', age: 45)
+        Comedian.create(name: 'Name3', age: 62)
+
+        expect(Comedian.average_age).to eq 42
+      end
+    end
+  end
   describe 'Validations' do
     describe 'Required Field(s)' do
       it 'should be invalid if missing a name' do
