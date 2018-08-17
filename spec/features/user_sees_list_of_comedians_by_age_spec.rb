@@ -5,7 +5,7 @@ RSpec.describe 'when visiting comedians/age' do
       Comedian.create(name: 'George Carlin', age: 81)
       Comedian.create(name: 'The Funny Man', age: 34)
 
-      visit '/comedians/?age=34'
+      visit '/comedians?age=34'
       save_and_open_page
       expect(page).to have_content('Louis CK')
       expect(page).to have_content('The Funny Man')
