@@ -1,0 +1,23 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Comedians</title>
+</head>
+
+<body>
+  <h3> Average Age: <%= @average_age %> </h3>
+  <% @comedians.each do |comedian| %>
+    <ul>
+      <li> <h4> Comedian: <%= comedian.name %> </h4> </li>
+      <li>Age: <%= comedian.age %></li>
+      <li> Special Count: <%= Special.comedian_specials(comedian.id).count %> </li>
+      <% Special.comedian_specials(comedian.id).each do |special| %>
+        <li> <%= special.name %> </li>
+      <% end %>
+    </ul>
+  <% end %>
+</body>
+</html>
