@@ -1,9 +1,12 @@
-<h1>Here are your comedians!!!!</h1>
+<h1 style='color: blue; font: sans-serif'>Here are your comedians!!!!</h1>
 
 <% @comedians.each do |comedian| %>
-  <label>Name: <%= comedian.name %></label><br/>
-  <label>Age: <%= comedian.age %></label><br/>
-  <label>Specials: <%= comedian.specials.first.name if comedian.specials.first %><br/>
+    <label>Name: <%= comedian.name %></label><br/>
+    <label>Age: <%= comedian.age %></label><br/>
+    <label>Specials: <%= comedian.specials.first.name if comedian.specials.first %><br/>
+    <label>Specials Count: <%= comedian.specials.count %></label><br/><br/>
 <% end %>
 
-<h3>Average Age: <%= @average_age %></h3>
+<h3>Wonder what the average age of these comedians is?</h3>
+<h4>Wonder NO MORE!</h4>
+<p>Average Age: <%= @average_age %></p>

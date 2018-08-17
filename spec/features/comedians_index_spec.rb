@@ -29,5 +29,11 @@ RSpec.describe 'Comedians Index Page' do
      expect(page).to have_content("Ian Bagg")
      expect(page).to_not have_content("George Lopez")
     end
+
+    it 'should show count of specials' do
+      visit '/comedians'
+
+      expect(page).to have_content("Specials Count: 1")
+    end
   end
 end
