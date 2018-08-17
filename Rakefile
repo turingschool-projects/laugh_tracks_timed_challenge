@@ -1,4 +1,4 @@
 require 'bundler'
-Bundler.require
+Bundler.require(:default, :test)
 
 require 'sinatra/activerecord/rake'
