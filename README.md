@@ -66,7 +66,6 @@ Then I see a list of all comedians with an age of 34.
 
 Testing should check that excluded comedians do not show up.
 ```
-
 ```
 User Story 5 of 5
 

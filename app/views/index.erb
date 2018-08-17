@@ -1,0 +1,12 @@
+<h1>All Comedians</h1>
+<h2>Average Age: <%= Comedian.average(:age)%></h2>
+<% @comedians.each do |comic| %>
+  <h3><%= comic.name %></h3>
+  <p><%= comic.age %></p><br/>
+  <h5>Specials:</h5><br/>
+  <p class='special_count'>Special Count: <%= comic.specials.count %></p>
+  <% comic.specials.each do |special| %>
+  <p><%= special.name %></p>
+  <% end %>
+
+<% end %>
