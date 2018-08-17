@@ -10,6 +10,24 @@ RSpec.describe Comedian do
         comic = Comedian.create(name: 'Mitch Hedberg')
         expect(comic).to_not be_valid
       end
+      
     end
   end
+  
+  describe 'Class Methods'
+    describe '.comedians_average_age' do
+      it 'returns average age for all comedians' do
+        Comedian.create(name: 'Dolphi', age: 25)
+        Comedian.create(name: 'Erma', age: 20)
+        Comedian.create(name: 'Hans', age: 30)
+
+        result = Comedian.comedians_average_age
+        
+        expect(result).to eq(25)
+      end
+    end 
+    
+  
 end
+
+
