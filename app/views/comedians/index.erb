@@ -3,5 +3,7 @@
 <% @comedians.each do |comedian| %>
   <label>Name: <%= comedian.name %></label><br/>
   <label>Age: <%= comedian.age %></label><br/>
-  <label>Specials: <%= comedian.specials.first.name %><br/>
+  <label>Specials: <%= comedian.specials.first.name if comedian.specials.first %><br/>
 <% end %>
+
+<h3>Average Age: <%= @average_age %></h3>
