@@ -21,5 +21,13 @@ RSpec.describe 'Comedians Index Page' do
 
       expect(page).to have_content("Average Age: 50")
     end
+
+    it 'should show only comedians of given age' do
+
+     visit '/comedians?age=44'
+
+     expect(page).to have_content("Ian Bagg")
+     expect(page).to_not have_content("George Lopez")
+    end
   end
 end
