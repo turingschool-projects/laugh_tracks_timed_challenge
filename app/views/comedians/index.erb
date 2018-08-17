@@ -3,4 +3,5 @@
 <% @comedians.each do |comedian| %>
   <label>Name: <%= comedian.name %></label><br/>
   <label>Age: <%= comedian.age %></label><br/>
+  <label>Specials: <%= comedian.specials.first.name %><br/>
 <% end %>
