@@ -1,0 +1,8 @@
+<% @comedians.each do |comedian| %>
+  <% if comedian.age = @age %>
+    <ul>
+        <li><%= * Name <%= comedian.name %></li>
+        <li><%= * Age <%= comedian.age %></li>
+    </ul>
+  <% end %>
+<% end %>
