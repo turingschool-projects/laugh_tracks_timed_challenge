@@ -1,0 +1,11 @@
+<% @comedians.each do |comedian| %>
+<%= comedian.name %>
+<%= comedian.age %>
+  <% @specials.each do |special| %>
+    <% if special.comedian_id == comedian.id %>
+    <%= special.name %>
+    <% end %>
+  <% end %>
+<%= "#{comedian.name} has #{Special.count(comedian.id)} specials" %>
+<% end %>
+<%= "Average age: #{Comedian.average_age}" %>
