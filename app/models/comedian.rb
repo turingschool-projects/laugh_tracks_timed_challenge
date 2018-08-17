@@ -3,9 +3,9 @@ class Comedian < ActiveRecord::Base
 
   validates :name, presence: true
   validates :age, presence: true
-
-  def self.average_age
-    ave(comedians.all[:age])
-  end
+  # 
+  # def self.average_age
+  #   ave(comedians.all[:age])
+  # end
 
 end
