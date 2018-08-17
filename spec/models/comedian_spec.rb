@@ -19,6 +19,13 @@ RSpec.describe Comedian do
 
       expect(Comedian.average_age).to eq(45)
     end
+    # it 'returns list of specials' do
+    #   comedian_1 = Comedian.create(name: 'Ron', age:40)
+    #   special_1 = comedian_1.specials.create(name: "Rock on")
+    #   special_2 = comedian_1.specials.create(name: "Cool")
+    #
+    #   expect(comedian_1.specials_report).to eq([name => "Rock on", "Cool"])
+    # end
 
   end
 end
