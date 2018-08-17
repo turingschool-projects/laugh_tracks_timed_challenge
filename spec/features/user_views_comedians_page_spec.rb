@@ -21,6 +21,12 @@ RSpec.describe 'Comedians index page' do
       expect(page).to have_content(@special_2.name)
     end
 
+    it 'shows average ages' do
+      visit '/comedians'
+
+      expect(page).to have_content("Average Age: 45")
+    end
+
     # it 'shows song lengths' do
     #   visit '/songs'
     #
