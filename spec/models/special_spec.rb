@@ -7,4 +7,8 @@ RSpec.describe Special do
       end
     end
   end
+  it 'has one comedian' do
+    association = described_class.reflect_on_association(:comedian)
+    expect(association.macro).to eq :belongs_to
+  end 
 end
